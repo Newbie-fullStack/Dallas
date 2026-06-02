@@ -1,0 +1,17 @@
+{
+  "name": "Café Restaurant Dallas",
+  "short_name": "Dallas",
+  "description": "Café, restaurant et snacks à Azrou, Maroc.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1C0A00",
+  "theme_color": "#C17A3A",
+  "icons": [
+    {
+      "src": "/iconDallas.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
