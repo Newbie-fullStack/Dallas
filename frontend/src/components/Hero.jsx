@@ -54,7 +54,7 @@ export default function Hero() {
       <div className="relative z-10 w-full">
         <div className="flex">
           <div
-            className="w-full md:w-1/2 flex flex-col justify-center"
+            className="w-full md:w-3/5 lg:w-1/2 flex flex-col justify-center"
             style={{ paddingLeft: 'clamp(1.25rem, 5vw, 8rem)', paddingRight: 'clamp(1.25rem, 5vw, 4rem)' }}
           >
             <div className="pt-24 md:pt-0 pb-10">
@@ -76,7 +76,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="font-heading text-[clamp(2rem,9vw,5.5rem)] leading-[1.0] text-white font-bold text-left"
+                className="font-heading text-[clamp(1.75rem,6.5vw,4.5rem)] leading-[1.0] text-white font-bold text-left break-words"
               >
                 WHERE{' '}
                 <span
@@ -130,7 +130,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hidden md:block w-1/2" />
+          <div className="hidden md:block md:w-2/5 lg:w-1/2" />
         </div>
       </div>
 
