@@ -182,11 +182,6 @@ body {
   animation: shimmer 2.5s linear infinite;
 }
 
-@keyframes bounce-arrow {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(8px); }
-}
-
 /* ──────────── Navbar ──────────── */
 
 .navbar {

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Star, ChevronDown } from 'lucide-react';
+import { ArrowRight, MapPin, Star } from 'lucide-react';
 import { RESTAURANT } from '../utils/restaurant';
 
 function CTAButton({ children, to, variant = 'primary' }) {
@@ -133,31 +133,6 @@ export default function Hero() {
           <div className="hidden md:block md:w-2/5 lg:w-1/2" />
         </div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 1.0 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 hidden md:flex"
-        style={{
-          background: 'rgba(255,255,255,0.15)',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
-          border: '1px solid rgba(255,255,255,0.3)',
-          borderRadius: '999px',
-          padding: '10px 24px',
-        }}
-      >
-        <span className="font-sansalt text-[0.75rem] uppercase tracking-[0.15em] text-white/80">
-          Découvrir
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <ChevronDown className="w-4 h-4 text-white/70" />
-        </motion.div>
-      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
