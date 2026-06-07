@@ -71,7 +71,7 @@ export default function Footer() {
       <div className="border-t border-warm-50/10">
         <div className="container-x py-5 flex flex-col md:flex-row items-center justify-between gap-2 font-ui text-xs text-warm-50/50">
           <p>&copy; {new Date().getFullYear()} Café Restaurant Dalas. Tous droits réservés.</p>
-          <p>Design par <span className="text-warm-200">Studio Dalas</span></p>
+          <p>Design par <a href="https://trivol-x.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-warm-200 hover:underline">Trivol-X</a></p>
         </div>
       </div>
     </footer>

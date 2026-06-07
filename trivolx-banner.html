@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Design par TRIVOLX</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .banner {
+    width: 100%;
+    max-width: 1280px;
+    aspect-ratio: 1280 / 200;
+    background: linear-gradient(180deg, #E07A2C 0%, #D26A20 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 5.5%;
+    position: relative;
+    overflow: hidden;
+  }
+  .text {
+    font-size: clamp(14px, 2.4vw, 32px);
+    color: #F4D88A;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .text strong {
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="text">Design par <strong>TRIVOLX</strong></div>
+  </div>
+</body>
+</html>
