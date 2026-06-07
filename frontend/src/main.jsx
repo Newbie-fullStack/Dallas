@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import App from './App.jsx';
 import 'leaflet/dist/leaflet.css';
 import './styles/index.css';
@@ -14,6 +16,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
       >
         <App />
+        <Analytics />
+        <SpeedInsights />
         <Toaster
           position="bottom-right"
           toastOptions={{
