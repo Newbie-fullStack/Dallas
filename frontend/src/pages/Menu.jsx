@@ -115,12 +115,21 @@ export default function Menu() {
               className="group relative block w-full rounded-2xl overflow-hidden border border-warm-200/60 shadow-warm-lg bg-warm-50 cursor-zoom-in"
               aria-label="Agrandir le menu"
             >
-              <img
-                src="/imageMenu/AllMenu.png"
-                alt="Menu complet Café Restaurant Dallas"
-                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-                draggable={false}
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/imageMenu/AllMenu-480.webp 480w, /imageMenu/AllMenu-768.webp 768w, /imageMenu/AllMenu-1280.webp 1280w"
+                  sizes="(min-width: 768px) 768px, 100vw"
+                />
+                <img
+                  src="/imageMenu/AllMenu.png"
+                  alt="Menu complet Café Restaurant Dallas"
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                />
+              </picture>
               <div className="absolute top-3 right-3 px-3 py-1.5 rounded-lg bg-dark-bg/70 backdrop-blur-sm flex items-center gap-1.5 text-warm-50 font-ui text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                 <ZoomIn className="w-3.5 h-3.5" />
                 Cliquez pour zoomer
@@ -181,8 +190,9 @@ export default function Menu() {
               initial={{ scale: 0.9 }}
               animate={{ scale, x: tx, y: ty }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              src="/imageMenu/AllMenu.png"
+              src="/imageMenu/AllMenu.webp"
               alt="Menu complet Café Restaurant Dallas"
+              decoding="async"
               onClick={(e) => e.stopPropagation()}
               onWheel={onWheel}
               drag={scale > 1}

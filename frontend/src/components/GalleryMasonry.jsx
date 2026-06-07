@@ -57,6 +57,7 @@ export default function GalleryMasonry() {
                     src={it.thumbnail_url || it.image_url}
                     alt={it.caption}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                     whileHover={{ scale: 1.08 }}
                     transition={{ duration: 0.6 }}

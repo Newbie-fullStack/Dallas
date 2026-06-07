@@ -15,11 +15,20 @@ export default function OurStory() {
             className="relative"
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-warm-lg border border-warm-200/60">
-              <img
-                src="/imageMenu/cafe-interieur.png"
-                alt="Café Dalas intérieur"
-                className="w-full h-full object-cover"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/imageMenu/cafe-interieur-768.webp 768w, /imageMenu/cafe-interieur.webp 1280w"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+                <img
+                  src="/imageMenu/cafe-interieur.png"
+                  alt="Café Dalas intérieur"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </picture>
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl bg-primary/10 hidden md:block" />
           </motion.div>

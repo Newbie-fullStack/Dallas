@@ -16,14 +16,23 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    target: 'es2020',
+    cssCodeSplit: true,
     chunkSizeWarningLimit: 1500,
+    minify: 'esbuild',
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: {
           react: ['react', 'react-dom', 'react-router-dom'],
           motion: ['framer-motion'],
+          leaflet: ['leaflet', 'react-leaflet'],
         },
       },
     },
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
+    legalComments: 'none',
   },
 });

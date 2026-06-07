@@ -30,12 +30,20 @@ export default function MenuSection() {
           className="relative max-w-2xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden border border-warm-200/60 shadow-warm-lg bg-warm-50">
-            <img
-              src="/imageMenu/AllMenu.png"
-              alt="Menu complet Café Restaurant Dallas"
-              className="w-full h-auto object-contain"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/imageMenu/AllMenu-480.webp 480w, /imageMenu/AllMenu-768.webp 768w, /imageMenu/AllMenu-1280.webp 1280w"
+                sizes="(min-width: 768px) 672px, 100vw"
+              />
+              <img
+                src="/imageMenu/AllMenu.png"
+                alt="Menu complet Café Restaurant Dallas"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
 
           <div className="flex justify-center mt-8">

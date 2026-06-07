@@ -30,15 +30,20 @@ export default function Hero() {
   return (
     <section ref={ref} className="relative min-h-[680px] h-screen overflow-hidden flex items-center">
       <motion.div
-        style={{
-          y,
-          willChange: 'transform',
-          backgroundImage: "url('/imageMenu/miniature.png')",
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-        }}
-        className="absolute inset-0 scale-110 bg-center md:bg-center"
-      />
+        style={{ y, willChange: 'transform' }}
+        className="absolute inset-0 scale-110"
+      >
+        <img
+          src="/imageMenu/miniature.webp"
+          srcSet="/imageMenu/miniature-480.webp 480w, /imageMenu/miniature-768.webp 768w, /imageMenu/miniature-1280.webp 1280w, /imageMenu/miniature.webp 1920w"
+          sizes="100vw"
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </motion.div>
 
       <div
         className="absolute inset-0 hidden md:block"

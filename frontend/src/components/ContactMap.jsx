@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { DAYS, HOURS, RESTAURANT } from '../utils/restaurant';
+import 'leaflet/dist/leaflet.css';
 
 const AZROU_COORDS = [33.44167, -5.22472];
 

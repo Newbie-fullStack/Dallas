@@ -17,7 +17,17 @@
       rel="stylesheet"
     />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="preload" as="image" href="/imageMenu/miniature.png" />
+    <link rel="dns-prefetch" href="https://a.basemaps.cartocdn.com" />
+    <link rel="dns-prefetch" href="https://b.basemaps.cartocdn.com" />
+    <link
+      rel="preload"
+      as="image"
+      href="/imageMenu/miniature.webp"
+      imagesrcset="/imageMenu/miniature-480.webp 480w, /imageMenu/miniature-768.webp 768w, /imageMenu/miniature-1280.webp 1280w, /imageMenu/miniature.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+      type="image/webp"
+    />
     <title>Café Restaurant Dalas · Azrou</title>
   </head>
   <body class="font-body antialiased">
