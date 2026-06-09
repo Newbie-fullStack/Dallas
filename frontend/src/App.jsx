@@ -18,7 +18,7 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <div className="fixed inset-0 z-[9999] pointer-events-none overflow-hidden opacity-30">
+      <div className="fixed top-10 right-10 w-48 h-48 z-[9999] pointer-events-none overflow-hidden opacity-20">
         <img src="/blur.png" className="w-full h-full object-cover" alt="Overlay" />
       </div>
       <ScrollToTop />
