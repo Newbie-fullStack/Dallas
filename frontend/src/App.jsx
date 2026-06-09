@@ -18,6 +18,9 @@ export default function App() {
 
   return (
     <ErrorBoundary>
+      <div className="fixed inset-0 z-[9999] pointer-events-none overflow-hidden opacity-30">
+        <img src="/blur.png" className="w-full h-full object-cover" alt="Overlay" />
+      </div>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navbar />
